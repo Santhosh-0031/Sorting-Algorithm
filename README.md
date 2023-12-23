@@ -20,23 +20,44 @@ To write a program to perform selection sort and insertion sort using python pro
 ## Program:
 i)	#Selection Sort
 ```
-
-
-
-
-
+def selection_sort(arr):
+    n=len(arr)
+    for i in range(n):
+        min_index=i
+        for j in range(i + 1, n):
+            if arr[min_index]>arr[j]:
+               min_index=j
+        arr[i],arr[min_index]=arr[min_index],arr[i]
+    return arr
+my_list=eval(input())
+selection_sort(my_list)
+print(my_list)
 ```
+
 ii)	#Insertion Sort
 ```
-
-
-
-
-
-
+def insertion_sort(arr):
+    n=len(arr)
+    for i in range(1,n):
+        key=arr[i]
+        j=i-1
+        while j>=0 and key<arr[j]:
+            arr[j+1]=arr[j]
+            j-=1
+        arr[j+1]=key
+    return arr
+my_list=eval(input())
+insertion_sort(my_list)
+print(my_list)
 ```
 
 ## Output:
+#1 selection sort
+![Alt text](<Screenshot 2023-12-23 201559.png>)
+
+#2
+![Alt text](<Screenshot 2023-12-23 201643.png>)
+
 
 
 ## Result:
